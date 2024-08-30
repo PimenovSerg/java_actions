@@ -24,4 +24,13 @@ class MathTest {
         int actual = math.addSum(4, 6);
         assertEquals(excepted, actual);
     }
+
+    @Test
+    void  minus(){
+        int ex = 10;
+        int ac = math.minusTwoDigits(12,2);
+        assertEquals(ex,ac);
+    }
+
+
 }
