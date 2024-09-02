@@ -28,7 +28,7 @@ class MathTest {
     @Test
     void  minus(){
         int ex = 10;
-        int ac = math.minusTwoDigits(12,2);
+        int ac = math.minusTwoDigits(12,3);
         assertEquals(ex,ac);
     }
 
