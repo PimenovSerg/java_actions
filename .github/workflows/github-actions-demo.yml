@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,8 +25,11 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean install
 
-      - name: Clean
-        run: mvn clean verify
+      - name: Run tests and generate coverage report
+        run: mvn verify
 
-      - name: Run tests
-        run: mvn test
+      - name: Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: jacoco-report
+          path: target/site/jacoco/
