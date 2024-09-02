@@ -15,4 +15,4 @@ jobs:
         with:
           distribution: '<distribution>'
           java-version: ${{ matrix.java }}
-      - run: java Math.java
+      - run: java Main.java
